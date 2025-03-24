@@ -9,8 +9,10 @@ import App from './App.jsx';
 import HomeScreen from './screens/HomeScreen.jsx';
 import LoginScreen from './screens/LoginScreen.jsx';
 import RegisterScreen from './screens/RegisterScreen.jsx';
+import UploadScreen from './screens/UploadScreen.jsx';
 import ProfileScreen from './screens/ProfileScreen.jsx';
 import PrivateRoute from './components/PrivateRoute.jsx';
+import GeminiScreen from './screens/GeminiScreen.jsx';  // Import Gemini Screen
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +20,8 @@ const router = createBrowserRouter(
       <Route index={true} element={<HomeScreen />} />
       <Route path='/login' element={<LoginScreen />} />
       <Route path='/register' element={<RegisterScreen />} />
+      <Route path='/upload' element={<UploadScreen />} />
+      <Route path='/gemini' element={<GeminiScreen />} /> {/* Add Route */}
       {/* Private Route Wrapper */}
       <Route element={<PrivateRoute />}>
         <Route path='/profile' element={<ProfileScreen />} />
@@ -26,11 +30,10 @@ const router = createBrowserRouter(
   )
 );
 
-
 createRoot(document.getElementById('root')).render(
   <Provider store={store}>
-  <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>
+    <StrictMode>
+      <RouterProvider router={router} />
+    </StrictMode>
   </Provider>
 );
