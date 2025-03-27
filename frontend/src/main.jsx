@@ -12,7 +12,8 @@ import RegisterScreen from './screens/RegisterScreen.jsx';
 import UploadScreen from './screens/UploadScreen.jsx';
 import ProfileScreen from './screens/ProfileScreen.jsx';
 import PrivateRoute from './components/PrivateRoute.jsx';
-import GeminiScreen from './screens/GeminiScreen.jsx';  // Import Gemini Screen
+import GeminiScreen from './screens/GeminiScreen.jsx';  
+import CloudinaryScreen from './screens/CloudinaryScreen.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,7 +22,8 @@ const router = createBrowserRouter(
       <Route path='/login' element={<LoginScreen />} />
       <Route path='/register' element={<RegisterScreen />} />
       <Route path='/upload' element={<UploadScreen />} />
-      <Route path='/gemini' element={<GeminiScreen />} /> {/* Add Route */}
+      <Route path='/gemini' element={<GeminiScreen />} /> 
+      <Route path='/cloudinary' element={<CloudinaryScreen />} />
       {/* Private Route Wrapper */}
       <Route element={<PrivateRoute />}>
         <Route path='/profile' element={<ProfileScreen />} />

@@ -7,7 +7,8 @@ import connectDB from './config/db.js';
 // Import routes
 import userRoutes from './routes/userRoutes.js';
 import uploadRoutes from './routes/uploadRoutes.js';
-import geminiRoutes from './routes/geminiRoutes.js'; // ✅ Add this
+import geminiRoutes from './routes/geminiRoutes.js'; 
+import cloudinaryRoutes from './routes/cloudinaryRoutes.js';
 
 dotenv.config();
 const port = process.env.PORT || 5000;
@@ -25,7 +26,8 @@ app.use(cookieParser());
 // Routes
 app.use('/api/users', userRoutes);
 app.use('/api/upload', uploadRoutes);
-app.use('/api/gemini', geminiRoutes); // ✅ Register the Gemini route
+app.use('/api/gemini', geminiRoutes); 
+app.use('/api/cloudinary', cloudinaryRoutes);
 
 app.get('/', (req, res) => res.send('Server is ready'));
 
