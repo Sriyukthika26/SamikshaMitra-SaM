@@ -6,8 +6,9 @@ This is a smart evaluation tool designed to process various submissions, includi
 - 📄 **PDFs**  
 - 📝 **Text files**  
 - 🎙️ **Audio**  
-- 🎥 **Video**  
-SaM is a full stack web application built using MongoDB, Express.js, React.js, Node.js, Gemini API & Flask.
+- 🎥 **Video**
+
+### SaM is a full stack web application built using MongoDB, Express.js, React.js, Node.js, Python, Gemini API & Flask.
 It uses **custom rubric tables** and **teacher-defined evaluation criteria** to grade submissions, providing detailed analysis through an **interactive dashboard**.  
 
 ## 🔹 Key Features of Application:
